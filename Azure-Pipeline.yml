@@ -1,0 +1,14 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  appname: 'myapp'
+  environment: 'production'
+
+steps:
+  - script: |
+      echo "My application is $(appname)"
+      echo "My environment is $(environment)"
