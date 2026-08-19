@@ -15,3 +15,6 @@ steps:
       echo "My environment is $(environment)"
       echo "My country is $(country)"
       echo "My current build is $(Build.BuildId)"
+      echo "My current build number is $(Build.BuildNumber)"
+      echo "My current build source is $(Build.BuildSourceBranch)"
+      echo "My current Repo name is $(Build.Repository.Name)"
