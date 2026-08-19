@@ -9,6 +9,9 @@ variables:
   environment: 'production'
   country: 'India'
 
+parameters:
+  - accountname: 'myaccountname'
+    
 steps:
   - script: |
       echo "My application is $(appname)"
