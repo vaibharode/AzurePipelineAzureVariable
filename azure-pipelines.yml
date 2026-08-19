@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  group: 'dev-var'
+  - group: 'dev-var'
    
 steps:
   - script: |
