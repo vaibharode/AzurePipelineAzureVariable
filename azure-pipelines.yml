@@ -5,13 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  appname: 'myapp'
-  environment: 'production'
-  country: 'India'
-
-parameters:
-  - accountname: 'myaccountname'
-    
+  group: 'dev-var'
+   
 steps:
   - script: |
       echo "My application is $(appname)"
