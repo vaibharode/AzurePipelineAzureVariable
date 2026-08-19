@@ -7,8 +7,11 @@ pool:
 variables:
   appname: 'myapp'
   environment: 'production'
+  country: 'India'
 
 steps:
   - script: |
       echo "My application is $(appname)"
       echo "My environment is $(environment)"
+      echo "My country is $(country)"
+      echo "My current build is $(Build.BuildId)"
