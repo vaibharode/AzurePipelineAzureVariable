@@ -6,7 +6,7 @@ pool:
 
 jobs:
   job: DisplayVariablesDev
-  displayName: 'Development Job'
+  displayName: 'Display Dev Variables'
 
   variables:
     - group: 'dev-var'
@@ -16,8 +16,8 @@ jobs:
         echo "My application is $(appname)"
         echo "My environment is $(environment)"
 
-  job: prod
-  displayName: 'Production Job'
+  job: DisplayVariablesProd
+  displayName: 'Display Prod Variables'
 
   variables:
     - group: 'prod-var'
