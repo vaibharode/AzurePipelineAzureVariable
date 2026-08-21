@@ -4,19 +4,25 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  - group: 'dev-var'
-   
-steps:
-  - script: |
-      echo "My application is $(appname)"
-      echo "My environment is $(environment)"
-      
-variables:
-  - group: 'prod -var'
+job:
+  job: dev
+  displayName: 'Development Job'
 
-steps:
-  - script: |
-      echo "My application is $(appname)"
-      echo "My environment is $(environment)"
-    
+  variables:
+    - group: 'dev-var'
+   
+  steps:
+    - script: |
+        echo "My application is $(appname)"
+        echo "My environment is $(environment)"
+
+  job: prod
+  displayName: 'Production Job'
+
+  variables:
+    - group: 'prod-var'
+
+  steps:
+    - script: |
+        echo "My application is $(appname)"
+        echo "My environment is $(environment)"
