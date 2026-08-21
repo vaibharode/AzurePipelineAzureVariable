@@ -5,24 +5,24 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
-  -job: DisplayVariablesDev
-  displayName: 'Display Dev Variables'
+  - job: DisplayVariablesDev
+    displayName: 'Display Dev Variables'
 
-  variables:
-    - group: 'dev-var'
-   
-  steps:
-    - script: |
-        echo "My application is $(appname)"
-        echo "My environment is $(environment)"
+    variables:
+      - group: 'dev-var'
 
-  -job: DisplayVariablesProd
-  displayName: 'Display Prod Variables'
+    steps:
+      - script: |
+          echo "My application is $(appname)"
+          echo "My environment is $(environment)"
 
-  variables:
-    - group: 'prod-var'
+  - job: DisplayVariablesProd
+    displayName: 'Display Prod Variables'
 
-  steps:
-    - script: |
-        echo "My application is $(appname)"
-        echo "My environment is $(environment)"
+    variables:
+      - group: 'prod-var'
+
+    steps:
+      - script: |
+          echo "My application is $(appname)"
+          echo "My environment is $(environment)"
