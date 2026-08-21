@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
-  job: DisplayVariablesDev
+  -job: DisplayVariablesDev
   displayName: 'Display Dev Variables'
 
   variables:
@@ -16,7 +16,7 @@ jobs:
         echo "My application is $(appname)"
         echo "My environment is $(environment)"
 
-  job: DisplayVariablesProd
+  -job: DisplayVariablesProd
   displayName: 'Display Prod Variables'
 
   variables:
