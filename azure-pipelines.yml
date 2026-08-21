@@ -56,7 +56,7 @@ stages:
       steps:
         - script: |
             docker build -t myapp:$(Build.BuildId) .
-            docker tag myapp:$(Build.BuildId) docker.io/atuljkamble/myapp:$(Build.BuildId)
+            docker tag myapp:$(Build.BuildId) docker.io/vaibhavrode/myapp:$(Build.BuildId)
             echo "Docker image built and tagged successfully."
           displayName: "Build and Tag Docker Image"
 
