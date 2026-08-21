@@ -11,4 +11,11 @@ steps:
   - script: |
       echo "My application is $(appname)"
       echo "My environment is $(environment)"
+variables:
+  - group: 'prod -var'
+
+steps:
+  - script: |
+      echo "My application is $(appname)"
+      echo "My environment is $(environment)"
     
